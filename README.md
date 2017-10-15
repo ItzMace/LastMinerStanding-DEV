@@ -1,5 +1,5 @@
 # LastMinerStanding - Issues
-BE - Issue Tracker. 
+LMS - Issue Tracker. 
 
 When creating an issue, please include lots and lots of detail. Videos are preferred, screenshots and full console logs are the very minimum. The following will also be nessecary:
 - "LastMinerStanding" version
