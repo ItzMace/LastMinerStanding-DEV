@@ -1,0 +1,125 @@
+# LastMinerStanding Configuration File
+LastMinerStanding:
+  # Do not change this value:
+  config: 1
+  # Do you want this plugin to be on a Standalone Server?
+  # Standalone means, that this is the only gametype on the server
+  # If true: The plugin will be the only gametype on the server
+  # If false: You use a MultiWorld System on your Server (Multiverse etc)
+  standaloneServer: true
+  # Prevent the players to stomp wheat in the lobby world?
+  PreventStomping: true
+  # Where should the players be teleported to when joining
+  LobbyWorld: "world"
+  # Lobby Location
+  LobbyLocation:
+    X: -528
+    Y: 87
+    Z: 889
+  # Join Sign for Hub
+  JoinSignLocation:
+    HubWorld: "world"
+    X: -503
+    Y: 4
+    Z: 22
+
+# Here you can edit gameplay relevant settings
+Gameplay:
+  # Minimum amount of players required for game start
+  MinPlayers: 3
+  # Maximum amount of players being able to join
+  MaxPlayers: 16
+  # Should Hunger be enabled ingame?
+  enableHunger: true
+  # Do you want to use Elytra-Flight for Spigot 1.9+ or not? (Limited Support if true!)
+  useElytra: false
+  # Do you want to enable Players natural regeneration when food bar is full enough?
+  useNaturalRegeneration: false
+  # Do you want to fully disallow Block Breaks in the Lobby World?
+  disallowBlockBreaksInLobbyWorld: true
+  
+  # Here you can manage which blocks players should be able to break during ingame
+  BlockBreak:
+    AllowAll: true
+    # Which Material should by bypassed by block break protection?
+    SAND:
+      # Which Material should be dropped when the block has been destroyed?
+      Drop: SAND
+      # How much Exp should be drop when the block has been destroyed?
+      Exp: 0
+    GRASS:
+      # Which Material should be dropped when the block has been destroyed?
+      Drop: DIRT
+      # How much Exp should be drop when the block has been destroyed?
+      Exp: 0
+    DIRT:
+      # Which Material should be dropped when the block has been destroyed?
+      Drop: DIRT
+      # How much Exp should be drop when the block has been destroyed?
+      Exp: 0
+    STONE:
+      # Which Material should be dropped when the block has been destroyed?
+      Drop: STONE
+      # How much Exp should be drop when the block has been destroyed?
+      Exp: 0
+      
+  # Here you can manage which blocks players should be able to place during ingame
+  # If you want to disable BlockPlacing, enter "- AIR" as Blockplace item!
+  BlockPlace:
+    - "*"
+
+  # Blood System
+  # Player starts bleeding when getting damaged
+  # User needs to use Bandages to stop bleeding
+  BloodSystem:
+    # Do you wish to enable the blood system?
+    enabled: true
+    # How much blood should the user have when the round starts?
+    blood: 5.0
+    # How much more blood should the user loose when getting damaged?
+    # Placeholders: {damage}, {finaldamage}
+    looseBloodFormula: "{finaldamage}/150.0"
+    # What Material should be Bandages made of?
+    material: "PAPER"
+    # Should Bandages be automatically renamed?
+    renameBandages: true
+    # What should be the new name?
+    newBandageName: "&7Bandage"
+    # How much L/s should a bandage reduce when used
+    bandageEffectivity: 5.0
+
+  # Specific Round Phase Settings
+  Phases:
+    # Change Lobby Phase specific settings
+    Lobby:
+      # To which time should the countdown be reset when
+      # there are not enough players to start (in Seconds)
+      Timer: 210
+      # Sould we shorten the wait time when the server is full?
+      InstantStartOnFull: true
+      # Do you wish to see the countdown in your exp-bar?
+      XPCountdown: false
+    Ingame:
+      # How long should the livegame be in total (+Warmup) (in Seconds)
+      TotalTime: 1200
+      # How long should the players have time to equip before
+      # PVP will be enabled (in Seconds)
+      Warmup: 60
+    Deathmatch:
+      # Should a Deathmatch be enabled? If false, the game will end after Ingame.TotalTime is over
+      enabled: true
+      # How long should the deathmatch take before game ends without winner
+      Time: 180
+      # Here you can define a custom Deathmatch Arena
+      DeathmatchArena:
+        # Should a custom Deathmatch Arena be enabled? If true, you need to define a teleport location
+        enabled: false
+        Teleport:
+          Worldname: "deathmatch"
+          X: 0
+          Y: 100
+          Z: 0
+      # How large should the Deathmatch Worldborder
+      Border_Radius: 50
+      # After how many seconds should the Border reach the above radius
+      Border_Timer: 100

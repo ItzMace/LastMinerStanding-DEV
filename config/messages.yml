@@ -1,0 +1,55 @@
+# LastMinerStanding Configuration File
+LastMinerStanding:
+  # Do not change this value:
+  config: 1
+  
+  # Custom declareration of messages being send ingame
+  # (Chat) Messages can be edited here:
+  # Placeholders:
+  # {player}		|		Displays the Name of a specific player (depends on context)
+  # {br}			|		Linebreak (Starts a new line)
+  # {minplayers}	|		Shows the amount of players that are required to start the game
+  # {lobbytimer}	|		Shows the current lobby timer (in seconds) until game starts
+  Messages:
+    # The Prefix will be printed in front of every message
+    prefix: "&a&lLMS &8> "
+    # This message will be send on join [Placeholders: {name}, {displayname}, {playerlistname}]
+    join_message: "&a» &7 &6{displayname} &7has joined the game."
+    # This message will be send on quit [Placeholders: {name}, {displayname}, {playerlistname}]
+    quit_message: "&c« &7 &6{displayname} &7has left the game."
+    # This message will be send when there are not enough players to start the game
+    lobby_notEnoughPlayers: "&cThe game needs at least {minplayers} players to start. {br}&7The countdown has been reset."
+    # This message will be send when there are not enough players to start the game
+    lobby_countdown: "&7The game starts in &6{lobbytimer} &7seconds!"
+    # This message will be send when all Items have been placed in the world
+    ingame_placeItems: "&aThere were &e{items} items &ahidden in the world."
+    # This message will be send when the warmup countdown expired and PVP is enabled
+    ingame_pvpEnable: "&4&lPVP has now been enabled"
+    # This message will be send when the player lands on the ground
+    ingame_flyEnd: "&a&lGood luck. You can now search for items."
+    # This message will be send when deathmatch has started
+    deathmatch_start: "&6The deathmatch has started. {br}&aNOTICE: The border is shrinking now."
+    # This message will be send when the time runs out and no winner is given
+    end_gameTimedOut: "&cThe game has end!{br}No winner could be determined!"
+    # This message will be send when the server is about to shut down
+    end_restarting: "&7The server restarts in &e{timer} second(s)"
+    # This message will be send when a player dies without other players damage
+    player_death: "&7The player &a{player} &7has died.&7"
+    # This message will be send when a player gets killed by a player
+    player_killed: "&7The player &a{player} &7was killed by &a{killer} &7"
+    # This message will be send when all players left the game and there is no winner
+    noWinnerLeft: "&cThere are no more players. The server will restart now."
+    # This message will be send when a player won LastMinerStanding
+    playerWon: "&e&lThe player &6&l{player}&e&l has won LastMinerStanding"
+    # This message will be send when player don't have enough permission
+    missingPermission: "&cYou don't have enough permission to access this."
+    # This message will be send when a player is out of the game
+    playerOutOfGame: "&7The player &a{player} &7is out of the game now!"
+    # This message will be send when a player gets spectator
+    spectator: "&cYou are now spectator!"
+    # This message will be send when a player reached the maxmimum item weight allowed
+    maxItemWeightReached: "&cYou have too many items in your inventory...{br}&cPlease drop some of them"
+    # This message will be send when a player fully stopped the bleeding with using a bandage
+    bleedingStopped: "&aYou're no longer bleeding."
+    # This message will be send when a player is bleeding less after using a bandage
+    bleedingDecreased: "&eYou're bleeding less after using a bandage."

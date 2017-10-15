@@ -1,0 +1,98 @@
+# LastMinerStanding Configuration File
+LastMinerStanding:
+  # Do not change this value:
+  config: 1
+  
+  # Displays a Scoreboard on the right side of the screen with some information
+  # Placeholders:
+  # {disable}		|		Hides a row
+  # {empty}			|		Shows an empty row
+  # {version}		|		Shows the Plugin Version
+  # {spigot}		|		Shows the Spigot Version
+  # {players}		|		Shows the amount of players on the server
+  #	{spectators}	|		Shows the amount of spectators on the server
+  #	{alives}		|		Shows the amount of alive players on the server
+  # {empty}			|		Shows an empty row
+  # {timer}			|		Shows a countdown
+  # {minplayers}	|		Shows the minimal amount of players of game start
+  # {weight}		|		Shows the current weight of items the player is holding in inventory
+  # {maxweight}		|		Shows the maximum weight of items a player can have
+  # {blood}			|		Shows the amount of blood a player currently has
+  # {bleeding}		|		Shows the amount of blood a player looses per second
+  Scoreboard:
+    Lobby:
+      enabled: true
+      Style:
+        header: "&f&lLastMinerStanding  &e{timer}"
+        score_14: " &oLMS {version}"
+        score_13: "{disable}"
+        score_12: "{disable}"
+        score_11: "{disable}"
+        score_10: "{disable}"
+        score_9: "{empty}"
+        score_8: "&7Players"
+        score_7: " &8» &a{players}"
+        score_6: "{empty}"
+        score_5: "&7Required Players"
+        score_4: " &8» &a{minplayers}"
+        score_3: "{empty}"
+        score_2: "&7Map"
+        score_1: "&8» &b{map}"
+        score_0: "{empty}"
+    Ingame:
+      enabled: true
+      Style:
+        header: "&f&lLastMinerStanding  &e{timer}"
+        score_14: " &oLMS {version}"
+        score_13: "{disable}"
+        score_12: "{disable}"
+        score_11: "{disable}"
+        score_10: "{disable}"
+        score_9: "{empty}"
+        score_8: "&7Players alive"
+        score_7: "&8» &a{alives}"
+        score_6: "{empty}"
+        score_5: "&7Weight"
+        score_4: "&8» &e{weight}&f/&e{maxweight}"
+        score_3: "{empty}"
+        score_2: "&7Blood"
+        score_1: "&8» &4&l{blood}&f/&4&l{bleeding}"
+        score_0: "{disable}"
+    Deathmatch:
+      enabled: true
+      Style:
+        header: "&f&lLastMinerStanding  &e{timer}"
+        score_14: " &oLMS {version}"
+        score_13: "{disable}"
+        score_12: "{disable}"
+        score_11: "{disable}"
+        score_10: "{disable}"
+        score_9: "{empty}"
+        score_8: "&7Players alive"
+        score_7: "&8» &a{alives}"
+        score_6: "{empty}"
+        score_5: "&7Weight"
+        score_4: "&8» &e{weight}&f/&e{maxweight}"
+        score_3: "{empty}"
+        score_2: "&7Blood"
+        score_1: "&8» &4&l{blood}&f/&4&l{bleeding}"
+        score_0: "{disable}"
+    AfterGame:
+      enabled: true
+      Style:
+        header: "&f&lLastMinerStanding  &e{timer}"
+        score_14: " &oLMS {version}"
+        score_13: "{disable}"
+        score_12: "{disable}"
+        score_11: "{disable}"
+        score_10: "{disable}"
+        score_9: "{disable}"
+        score_8: "{disable}"
+        score_7: "{empty}"
+        score_6: "&4&lGame Over"
+        score_5: " &eRestarting"
+        score_4: "{empty}"
+        score_3: "{empty}"
+        score_2: "{disable}"
+        score_1: "{disable}"
+        score_0: "{disable}"
