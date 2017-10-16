@@ -1,0 +1,168 @@
+World:
+  enabled: true
+  Environment:
+    Time: 4
+    HoldTime: false
+    DisableRain: true
+  Worldborder:
+    Center:
+      X: 531
+      Z: -720
+    Radius: 450
+  ItemSpawn:
+    Spawn0:
+      enabled: true
+      AmountOfItems: 12
+      AllowCaves: false
+      From:
+        X: 419
+        Y: 64
+        Z: -735
+      To:
+        X: 719
+        Y: 76
+        Z: -698
+    Spawn1:
+      enabled: true
+      AmountOfItems: 3
+      AllowCaves: false
+      From:
+        X: 399
+        Y: 63
+        Z: -838
+      To:
+        X: 421
+        Y: 104
+        Z: -803
+    Spawn2:
+      enabled: true
+      AmountOfItems: 20
+      AllowCaves: false
+      From:
+        X: 457
+        Y: 66
+        Z: -1048
+      To:
+        X: 599
+        Y: 69
+        Z: -993
+    Spawn3:
+      enabled: true
+      AmountOfItems: 2
+      AllowCaves: false
+      From:
+        X: 516
+        Y: 70
+        Z: -1117
+      To:
+        X: 530
+        Y: 78
+        Z: -1106
+    Spawn4:
+      enabled: true
+      AmountOfItems: 15
+      AllowCaves: false
+      From:
+        X: 402
+        Y: 69
+        Z: -1170
+      To:
+        X: 483
+        Y: 78
+        Z: -1136
+    Spawn5:
+      enabled: true
+      AmountOfItems: 10
+      AllowCaves: false
+      From:
+        X: 708
+        Y: 68
+        Z: -1096
+      To:
+        X: 750
+        Y: 120
+        Z: -1054
+    Spawn6:
+      enabled: true
+      AmountOfItems: 10
+      AllowCaves: false
+      From:
+        X: 767
+        Y: 64
+        Z: -1028
+      To:
+        X: 797
+        Y: 87
+        Z: -1011
+    Spawn7:
+      enabled: true
+      AmountOfItems: 5
+      AllowCaves: false
+      From:
+        X: 826
+        Y: 62
+        Z: -1041
+      To:
+        X: 862
+        Y: 68
+        Z: -1020
+    Spawn8:
+      enabled: true
+      AmountOfItems: 5
+      AllowCaves: false
+      From:
+        X: 861
+        Y: 63
+        Z: -1081
+      To:
+        X: 880
+        Y: 80
+        Z: -1043
+    Spawn9:
+      enabled: true
+      AmountOfItems: 5
+      AllowCaves: false
+      From:
+        X: 897
+        Y: 63
+        Z: -1072
+      To:
+        X: 929
+        Y: 89
+        Z: -1035
+    Spawn10:
+      enabled: true
+      AmountOfItems: 5
+      AllowCaves: false
+      From:
+        X: 890
+        Y: 63
+        Z: -1111
+      To:
+        X: 955
+        Y: 86
+        Z: -1083
+    Spawn11:
+      enabled: true
+      AmountOfItems: 5
+      AllowCaves: false
+      From:
+        X: 940
+        Y: 63
+        Z: -1063
+      To:
+        X: 968
+        Y: 81
+        Z: -1026
+    Spawn12:
+      enabled: true
+      AmountOfItems: 5
+      AllowCaves: false
+      From:
+        X: 887
+        Y: 62
+        Z: -1006
+      To:
+        X: 954
+        Y: 83
+        Z: -961
