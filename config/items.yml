@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 1
+  config: 2
 
   # Here you can manage the item spawns:
   # If you turn multiple entries to true, the system will select a random spawn type
@@ -26,6 +26,48 @@ LastMinerStanding:
     MaximumWeight: 100
     # Default weight of items picked up ingame (if NOT declared below)
     DefaultWeight: 0
+    
+  # From here on, you can customize your crackshot item support:
+  CrackShotItems:
+    # Do you want to ignore LastMinerStanding items and only use CrackShot items instead?
+    # If this is set to false, CrackShot items will be added to the pool first (by chance)
+    # and the rest of the free percentages will be filled with Items below (if total chance above 100)
+    # Note: If CrackShot is NOT loaded, this option will be set to false
+    useCrackShotItemsOnly: true
+    Items:
+      # IMPORTANT: Use your configured items name as item here (this is the default CS config):
+      # Weight >> Defines the weight of the items due to the weight system above
+      # Chance >> Defines the spawn chance of the items in the world on game start
+      Gauss:
+        Weight: 10
+        Chance: 5
+      Carbine:
+        Weight: 10
+        Chance: 5
+      Deagle:
+        Weight: 6
+        Chance: 5
+      Bazooka:
+        Weight: 20
+        Chance: 5
+      Python:
+        Weight: 10
+        Chance: 5
+      Riotshield:
+        Weight: 10
+        Chance: 5
+      Olympia:
+        Weight: 10
+        Chance: 5
+      Hunting:
+        Weight: 13
+        Chance: 5
+      Type95:
+        Weight: 10
+        Chance: 5
+      AK-47:
+        Weight: 10
+        Chance: 5
 
   # Custom declareration of items that can be found in game
   # Weight >> Defines the weight of the items due to the weight system above
