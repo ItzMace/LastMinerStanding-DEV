@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 1
+  config: 2
   
   # Custom declareration of messages being send ingame
   # (Chat) Messages can be edited here:
@@ -47,6 +47,8 @@ LastMinerStanding:
     playerOutOfGame: "&7The player &a{player} &7is out of the game now!"
     # This message will be send when a player gets spectator
     spectator: "&cYou are now spectator!"
+    # This will be send to a player when he/she uses the /start command
+    gameStarted: "&aYou started the game..."
     # This message will be send when a player reached the maxmimum item weight allowed
     maxItemWeightReached: "&cYou have too many items in your inventory...{br}&cPlease drop some of them"
     # This message will be send when a player fully stopped the bleeding with using a bandage

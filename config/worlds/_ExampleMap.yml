@@ -1,7 +1,9 @@
 # World Configuration File for LastMinerStanding
 World:
+  # DO NOT CHANGE THIS VALUE
+  config: 1
   # Do you want this map to be enabled?
-  enabled: true
+  enabled: false
   # This are general environment settings
   Environment:
     # This time will be set on game start (like /time <time> command)
