@@ -1,44 +1,62 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 1
-  # Do you want this plugin to be on a Standalone Server?
+  config: 2
+  # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
-  # If false: You use a MultiWorld System on your Server (Multiverse etc)
+  # If false: You use a MultiWorld System on your Server (Multiverse etc.)
   standaloneServer: true
   # Prevent the players to stomp wheat in the lobby world?
   PreventStomping: true
-  # Where should the players be teleported to when joining
+  # Where should the players be teleported to when joining?
   LobbyWorld: "world"
   # Lobby Location
   LobbyLocation:
     X: -528
     Y: 87
     Z: 889
-  # Join Sign for Hub
-  JoinSignLocation:
-    HubWorld: "world"
-    X: -503
-    Y: 4
-    Z: 22
-
+  # Join Sign for Hub (Multiworld systems ONLY)
+  JoinSign:
+    # Syntax for Join Signs
+    Syntax: 
+      Line1: "&8[ &6LMS &8]"
+      Line2: "&6{players} &8/ &6{maxplayers}"
+      Line3: "{state}"
+      Line4: "{timer} seconds"
+    # Do you want the signs to be placed to the given locations by the plugin?
+    # (LIMITED SUPPORT: Sometimes signs may break and lay as items on ground. Should be used for testing only!)
+    autoSpawnSigns: false
+    # List of all join signs
+    # Please mind not leaving out a sign id number (Sign_1, Sign_2, Sign_3...)
+    Signs:
+      Sign_1:
+        world: "hub"
+        X: -525
+        Y: 5
+        Z: 886
+      Sign_2:
+        world: "hub"
+        X: -525
+        Y: 5
+        Z: 887
+        
 # Here you can edit gameplay relevant settings
 Gameplay:
-  # Minimum amount of players required for game start
+  # Minimum amount of players required for the game to start.
   MinPlayers: 3
-  # Maximum amount of players being able to join
+  # Maximum amount of players being able to join.
   MaxPlayers: 16
-  # Should Hunger be enabled ingame?
+  # Should hunger be enabled ingame?
   enableHunger: true
-  # Do you want to use Elytra-Flight for Spigot 1.9+ or not? (Limited Support if true!)
+  # Do you want to use Elytra-Flight for Spigot 1.9+? (Limited support if true!)
   useElytra: false
-  # Do you want to enable Players natural regeneration when food bar is full enough?
+  # Do you want to enable players natural regeneration when the food bar is full enough?
   useNaturalRegeneration: false
-  # Do you want to fully disallow Block Breaks in the Lobby World?
+  # Do you want to fully disallow breaking blocks in the lobby world?
   disallowBlockBreaksInLobbyWorld: true
   
-  # Here you can manage which blocks players should be able to break during ingame
+  # Here you can manage which blocks players should be able to break during ingame:
   BlockBreak:
     AllowAll: true
     # Which Material should by bypassed by block break protection?
