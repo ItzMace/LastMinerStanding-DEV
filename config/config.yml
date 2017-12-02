@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 2
+  config: 3
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -49,6 +49,10 @@ Gameplay:
   MaxPlayers: 16
   # Should hunger be enabled ingame?
   enableHunger: true
+  # Do you want players to drop items on death?
+  dropItemsOnDeath: true
+  # Do you want to allow players to drop items from their inventory?
+  dropItemsOutOfInventory: true
   # Do you want to use Elytra-Flight for Spigot 1.9+? (Limited support if true!)
   useElytra: false
   # Do you want to enable players natural regeneration when the food bar is full enough?
