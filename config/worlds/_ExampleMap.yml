@@ -1,9 +1,13 @@
 # World Configuration File for LastMinerStanding
 World:
   # DO NOT CHANGE THIS VALUE
-  config: 2
+  config: 3
   # Do you want this map to be enabled?
   enabled: false
+  # The name of the map
+  name: "Example Map Name"
+  # By who is this map created?
+  builder: "Example Builder Team"
   # What is the world folder name of the map?
   world_folder: "playworld"
   # What is the backup world folder name of the map?
