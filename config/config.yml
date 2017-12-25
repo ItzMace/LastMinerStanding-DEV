@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 3
+  config: 4
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -145,3 +145,18 @@ Gameplay:
       Border_Radius: 50
       # After how many seconds should the Border reach the above radius
       Border_Timer: 100
+# = Custom MOTD support =
+# Placeholders:
+# {players} = amount of online players
+# {maxplayers} = amount of max players allowed
+# {minplayers} = amount of min players required to start
+# {countdown} = countdown until game starts
+MOTDsupport:
+  # Do you want to enable custom MOTD support?
+  enabled: false
+  # MOTD for game state 'LOBBY'
+  lobby: "&aLMS &7> &aLOBBY"
+  # MOTD for game state 'INGAME'
+  ingame: "&aLMS &7> &6INGAME"
+  # MOTD for game state 'RESTARTING'
+  restarting: "&aLMS &7> &cRESTARTING"
