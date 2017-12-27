@@ -1,12 +1,15 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 4
+  config: 5
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
   # If false: You use a MultiWorld System on your Server (Multiverse etc.)
   standaloneServer: true
+  # Do you want to execute the /reload command when the round is over?
+  # NOTE: The server won't stop, it will just reload. This is not recommended, but you wished it to be added.
+  doReloadAndNoShutdown: false
   # Prevent the players to stomp wheat in the lobby world?
   PreventStomping: true
   # Where should the players be teleported to when joining?
