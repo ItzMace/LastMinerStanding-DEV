@@ -3,12 +3,12 @@ LastMinerStanding:
   # Do not change this value:
   config: 4
 
-  # Which items do you want the players have in inventory on game start:
+  # Which items do you want the players have in inventory on game start (Syntax: 'MATERIAL:AMOUNT' or 'MATERIAL'):
   StartItems:
         - COMPASS
 
   # Should the compass point to the next living player?
-  UseCompassAsPointer: false
+  UseCompassAsPointer: true
 
   # Here you can manage the item spawns:
   # If you turn multiple entries to true, the system will select a random spawn type

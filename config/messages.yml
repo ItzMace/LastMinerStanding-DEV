@@ -1,15 +1,20 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 1
+  config: 2
   
   # Custom declareration of messages being send ingame
   # (Chat) Messages can be edited here:
   # Placeholders:
-  # {player}		|		Displays the Name of a specific player (depends on context)
-  # {br}			|		Linebreak (Starts a new line)
-  # {minplayers}	|		Shows the amount of players that are required to start the game
-  # {lobbytimer}	|		Shows the current lobby timer (in seconds) until game starts
+  # {name}					|		Displays the Name of a specific player (depends on context)
+  # {displayame}				|		Displays the Displayname of a specific player (depends on context)
+  # {playerlistname}			|		Displays the Playerlistname of a specific player (depends on context)
+  # {killer_name}				|		Displays the Name of a specific killer (depends on context)
+  # {killer_displayame}		|		Displays the Displayname of a specific killer (depends on context)
+  # {killer_playerlistname}	|		Displays the Playerlistname of a specific killer (depends on context)
+  # {br}						|		Linebreak (Starts a new line)
+  # {minplayers}				|		Shows the amount of players that are required to start the game
+  # {lobbytimer}				|		Shows the current lobby timer (in seconds) until game starts
   Messages:
     # The Prefix will be printed in front of every message
     prefix: "&a&lLMS &8> "
@@ -34,19 +39,21 @@ LastMinerStanding:
     # This message will be send when the server is about to shut down
     end_restarting: "&7The server restarts in &e{timer} second(s)"
     # This message will be send when a player dies without other players damage
-    player_death: "&7The player &a{player} &7has died.&7"
+    player_death: "&7The player &a{name} &7has died.&7"
     # This message will be send when a player gets killed by a player
-    player_killed: "&7The player &a{player} &7was killed by &a{killer} &7"
+    player_killed: "&7The player &a{name} &7was killed by &a{killer_name} &7"
     # This message will be send when all players left the game and there is no winner
     noWinnerLeft: "&cThere are no more players. The server will restart now."
     # This message will be send when a player won LastMinerStanding
-    playerWon: "&e&lThe player &6&l{player}&e&l has won LastMinerStanding"
+    playerWon: "&e&lThe player &6&l{name}&e&l has won LastMinerStanding"
     # This message will be send when player don't have enough permission
     missingPermission: "&cYou don't have enough permission to access this."
     # This message will be send when a player is out of the game
-    playerOutOfGame: "&7The player &a{player} &7is out of the game now!"
+    playerOutOfGame: "&7The player &a{name} &7is out of the game now!"
     # This message will be send when a player gets spectator
     spectator: "&cYou are now spectator!"
+    # This will be send to a player when he/she uses the /start command
+    gameStarted: "&aYou started the game..."
     # This message will be send when a player reached the maxmimum item weight allowed
     maxItemWeightReached: "&cYou have too many items in your inventory...{br}&cPlease drop some of them"
     # This message will be send when a player fully stopped the bleeding with using a bandage
