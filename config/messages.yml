@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 2
+  config: 3
   
   # Custom declareration of messages being send ingame
   # (Chat) Messages can be edited here:
@@ -32,8 +32,6 @@ LastMinerStanding:
     ingame_pvpEnable: "&4&lPVP has now been enabled"
     # This message will be send when the player lands on the ground
     ingame_flyEnd: "&a&lGood luck. You can now search for items."
-    # This message will be send when deathmatch has started
-    deathmatch_start: "&6The deathmatch has started. {br}&aNOTICE: The border is shrinking now."
     # This message will be send when the time runs out and no winner is given
     end_gameTimedOut: "&cThe game has end!{br}No winner could be determined!"
     # This message will be send when the server is about to shut down
@@ -48,15 +46,28 @@ LastMinerStanding:
     playerWon: "&e&lThe player &6&l{name}&e&l has won LastMinerStanding"
     # This message will be send when player don't have enough permission
     missingPermission: "&cYou don't have enough permission to access this."
-    # This message will be send when a player is out of the game
-    playerOutOfGame: "&7The player &a{name} &7is out of the game now!"
     # This message will be send when a player gets spectator
     spectator: "&cYou are now spectator!"
     # This will be send to a player when he/she uses the /start command
     gameStarted: "&aYou started the game..."
     # This message will be send when a player reached the maxmimum item weight allowed
     maxItemWeightReached: "&cYou have too many items in your inventory...{br}&cPlease drop some of them"
-    # This message will be send when a player fully stopped the bleeding with using a bandage
-    bleedingStopped: "&aYou're no longer bleeding."
-    # This message will be send when a player is bleeding less after using a bandage
-    bleedingDecreased: "&eYou're bleeding less after using a bandage."
+    # BloodSystem Messages:
+    BloodSystem:
+      # This message will be send when a player fully stopped the bleeding with using a bandage
+      bleedingStopped: "&aYou're no longer bleeding."
+      # This message will be send when a player is bleeding less after using a bandage
+      bleedingDecreased: "&eYou're bleeding less after using a bandage."
+      # This message will be send when a player fully stopped the bleeding and tries to use another bandage.
+      notBleeding: "&aYou are not bleeding at the moment."
+    # Safezone Messages:
+    Safezone:
+      # Actiobar Countdown:
+      # Do you want the actionbar countdown to be enabled?:
+      enableActionbarCountdown: true
+      # What do you want the actionbar countdown to be? [Placeholder: {countdown}]:
+      actiobarCountdownMessage: "&aThe border shrinks in &e{countdown} seconds"
+    # Multiarena Messages:
+    Multiarena:
+      # What message should a player recieve when joining an arena? [Placeholder: {arena_name}]:
+      joinArenaMessage: "&aYou have been connected to &l{arena_name}"

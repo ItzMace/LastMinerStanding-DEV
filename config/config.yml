@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 5
+  config: 6
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -12,38 +12,38 @@ LastMinerStanding:
   doReloadAndNoShutdown: false
   # Prevent the players to stomp wheat in the lobby world?
   PreventStomping: true
-  # Where should the players be teleported to when joining?
-  LobbyWorld: "world"
-  # Lobby Location
-  LobbyLocation:
-    X: -528
-    Y: 87
-    Z: 889
-  # Join Sign for Hub (Multiworld systems ONLY)
-  JoinSign:
-    # Syntax for Join Signs
-    Syntax: 
+  # Do you want to prevent a player from taking of the parachute?
+  PreventTakeOffParachute: false
+  # Do you want to prevent a player from joining when the game has already been started?
+  PreventJoinAfterStart: false
+  # General JoinSign Module
+  JoinSigns:
+    # Do you want the signs to be placed to the given locations by the plugin?
+    # (LIMITED SUPPORT: Sometimes signs may break and lay as items on ground. Should be used for testing only!)
+    autoSpawnSigns: false
+    # General Syntax of Join Signs [PLACEHOLDERS: {players}, {maxplayers}, {state}, {timer}]
+    Syntax:
       Line1: "&8[ &6LMS &8]"
       Line2: "&6{players} &8/ &6{maxplayers}"
       Line3: "{state}"
       Line4: "{timer} seconds"
-    # Do you want the signs to be placed to the given locations by the plugin?
-    # (LIMITED SUPPORT: Sometimes signs may break and lay as items on ground. Should be used for testing only!)
-    autoSpawnSigns: false
-    # List of all join signs
-    # Please mind not leaving out a sign id number (Sign_1, Sign_2, Sign_3...)
-    Signs:
-      Sign_1:
-        world: "hub"
-        X: -525
-        Y: 5
-        Z: 886
-      Sign_2:
-        world: "hub"
-        X: -525
-        Y: 5
-        Z: 887
-        
+
+  # MOTD Manager:
+  # Placeholders:
+  # {players} = amount of online players
+  # {maxplayers} = amount of max players allowed
+  # {minplayers} = amount of min players required to start
+  # {countdown} = countdown until game starts
+  MOTDsupport:
+    # Do you want to enable custom MOTD support?
+    enabled: false
+    # MOTD for game state 'LOBBY'
+    lobby: "&aLMS &7> &aLOBBY"
+    # MOTD for game state 'INGAME'
+    ingame: "&aLMS &7> &6INGAME"
+    # MOTD for game state 'RESTARTING'
+    restarting: "&aLMS &7> &cRESTARTING"
+
 # Here you can edit gameplay relevant settings
 Gameplay:
   # Minimum amount of players required for the game to start.
@@ -62,6 +62,32 @@ Gameplay:
   useNaturalRegeneration: false
   # Do you want to fully disallow breaking blocks in the lobby world?
   disallowBlockBreaksInLobbyWorld: true
+  # How many HP should all players have max.? (Default: 20.0 = 10 Hearts)
+  maxHealthModifier: 20.0
+  
+  # From here on, the Team engine starts:
+  Teams:
+    # This defines the size of one team. If solo, enter 1 (Default: 1)
+    size: 1
+    # Team-Selector Item
+    Item:
+      # Team-Selector Item
+      Type: WATCH
+      # Team-Selector Item
+      Name: "&6Select Team"
+    # Do you want Friendly Fire to be enabled?
+    friendlyFire: false
+    # Which Material should by bypassed by block break protection?
+    TeamNames:
+      # Do you want to generate team names by the player names in the team? (If false, the list underneath will be used)
+      generateTeamNames: false
+      # If false, the following team names will be picked:
+      List:
+        - "Alpha"
+        - "Bravo"
+        - "Charlie"
+        - "Delta"
+        - "Echo"
   
   # Here you can manage which blocks players should be able to break during ingame:
   BlockBreak:
@@ -112,6 +138,13 @@ Gameplay:
     newBandageName: "&7Bandage"
     # How much L/s should a bandage reduce when used
     bandageEffectivity: 5.0
+    # BLACKLISTED DAMAGE CAUSES (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html)
+    # You can add any damage cause here that wil not increase the bleeding of a player.
+    # Possible examples: DROWNING, STARVATION, FALL
+    blacklistedDamagecause:
+      - DROWNING
+      - STARVATION
+      - FALL
 
   # Specific Round Phase Settings
   Phases:
@@ -130,36 +163,22 @@ Gameplay:
       # How long should the players have time to equip before
       # PVP will be enabled (in Seconds)
       Warmup: 60
-    Deathmatch:
-      # Should a Deathmatch be enabled? If false, the game will end after Ingame.TotalTime is over
-      enabled: true
-      # How long should the deathmatch take before game ends without winner
-      Time: 180
-      # Here you can define a custom Deathmatch Arena
-      DeathmatchArena:
-        # Should a custom Deathmatch Arena be enabled? If true, you need to define a teleport location
+      # Custom Command Executor
+      Commands:
+        # Do you want to dispatch commands when this game phase starts?
         enabled: false
-        Teleport:
-          Worldname: "deathmatch"
-          X: 0
-          Y: 100
-          Z: 0
-      # How large should the Deathmatch Worldborder
-      Border_Radius: 50
-      # After how many seconds should the Border reach the above radius
-      Border_Timer: 100
-# = Custom MOTD support =
-# Placeholders:
-# {players} = amount of online players
-# {maxplayers} = amount of max players allowed
-# {minplayers} = amount of min players required to start
-# {countdown} = countdown until game starts
-MOTDsupport:
-  # Do you want to enable custom MOTD support?
-  enabled: false
-  # MOTD for game state 'LOBBY'
-  lobby: "&aLMS &7> &aLOBBY"
-  # MOTD for game state 'INGAME'
-  ingame: "&aLMS &7> &6INGAME"
-  # MOTD for game state 'RESTARTING'
-  restarting: "&aLMS &7> &cRESTARTING"
+        # Which command do you want to execute?
+        commands:
+          - "/examplecommand"
+    GameEnd:
+      # Custom Command Executor
+      Commands:
+        # Do you want to dispatch commands when this game phase starts?
+        enabled: false
+        # Which command do you want to execute?
+        # Placeholders:
+        # {winner_name} - The name of the player who won, otherwise 'null'
+        # {winner_displayname} - The displayname of the player who won, otherwise 'null'
+        # {winner_playerlistname} - The playerlistname of the player who won, otherwise 'null'
+        commands:
+          - "/examplecommand {winner_name}"

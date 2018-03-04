@@ -1,0 +1,83 @@
+# World Configuration File for LastMinerStanding
+World:
+  # DO NOT CHANGE THIS VALUE
+  config: 4
+  # Do you want this map to be enabled?
+  enabled: false
+  # The name of the map
+  name: "Example Map Name"
+  # By who is this map created?
+  builder: "Example Builder Team"
+  # This are general environment settings
+  Environment:
+    # This time will be set on game start (like /time <time> command)
+    Time: 0
+    # Do you want to hold the time on the value above or you want to let the sun go as default?
+    HoldTime: false
+    # Do you want to disable rain?
+    DisableRain: true
+  # This are the default worldborder settings
+  Worldborder:
+    # Where do you want to set the worldborder center?
+    Center:
+      X: 531
+      Z: -720
+    # Which radius do you want to have the worldborder
+    Radius: 450
+    # Safezone Management System
+    Safezone:
+      # How many seconds delay do you wish to have between worldborder shrinking?
+      # NOTE: The amount of seconds is the amount of shrinks in total! If you provide e.g. THREE times, there will be exact THREE shrinkings!
+      SecondsBetweenShrinking:
+        - 600
+        - 420
+        - 300
+      # How many seconds do you want the shrinking to take before it reaches its final size?
+      SecondsToReach: 30
+      # What should be the factor of the border after shrinking? (example: '0.75' = 75% of PREVIOUS border radius)
+      ShrinkingFactor: 0.75
+  # This are the item spawn location (areas)
+  # YOU ARE FREE TO SET AS MANY SPAWN LOCATION AS YOU WISH TO. MAKE THEN WITH INCREASING IDs (Spawn0, Spawn1, Spawn2...)
+  ItemSpawn:
+    # THIS DEFINES ALL SPAWN _AREAS_ [DEPRECATED]:
+    Areas:
+      # This is Spawn Area #0:
+      Spawn0:
+        # How many items do you want to spawn in this area (eg. amount of Chests)
+        AmountOfItems: 12
+        # This is the start location of the item spawn area:
+        From:
+          X: 419
+          Y: 64
+          Z: -735
+        # This is the end location of the item spawn area:
+        To:
+          X: 719
+          Y: 76
+          Z: -698
+      # This is Spawn Area #1:
+      Spawn1:
+        # How many items do you want to spawn in this area (eg. amount of Chests)
+        AmountOfItems: 3
+        # This is the start location of the item spawn area:
+        From:
+          X: 399
+          Y: 63
+          Z: -838
+        # This is the end location of the item spawn area:
+        To:
+          X: 421
+          Y: 104
+          Z: -803
+    # THIS DEFINES ALL SPAWN _LOCATIONS_:
+    ExactLocations:
+      # This is Spawn Location #0:
+      Spawn0:
+        X: 719
+        Y: 76
+        Z: -698
+      # This is Spawn Location #1:
+      Spawn1:
+        X: 720
+        Y: 76
+        Z: -698

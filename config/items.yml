@@ -1,11 +1,19 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 4
+  config: 5
 
-  # Which items do you want the players have in inventory on game start (Syntax: 'MATERIAL:AMOUNT' or 'MATERIAL'):
+  # Which items do you want the players have in inventory on game start?:
+  # List of possible settings (If not set, the default value will be picked):
+  # Amount >> Defines how many items of a stack should be spawned/ placed. (Default: 1)
+  # SlotID >> Defines on which slot in inventory the item will be placed. (Default: First free slot)
+  # CustomName >> Defines which name the item should have. (Default: Default item name (by Minecraft))
   StartItems:
-        - COMPASS
+    COMPASS:
+      Amount: 1
+      SlotID: 8
+    MAP:
+      SlotID: 0
 
   # Should the compass point to the next living player?
   UseCompassAsPointer: true
@@ -36,11 +44,9 @@ LastMinerStanding:
     
   # From here on, you can customize your crackshot item support:
   CrackShotItems:
-    # Do you want to ignore LastMinerStanding items and only use CrackShot items instead?
-    # If this is set to false, CrackShot items will be added to the pool first (by chance)
-    # and the rest of the free percentages will be filled with Items below (if total chance above 100)
+    # Do you want to add CrackShot items to the item drop pool?
     # Note: If CrackShot is NOT loaded, this option will be set to false
-    useCrackShotItemsOnly: true
+    useCrackShotItems: true
     Items:
       # IMPORTANT: Use your configured items name as item here (this is the default CS config):
       # Weight >> Defines the weight of the items due to the weight system above
@@ -77,8 +83,10 @@ LastMinerStanding:
         Chance: 5
 
   # Custom declareration of items that can be found in game
-  # Weight >> Defines the weight of the items due to the weight system above
-  # Chance >> Defines the spawn chance of the items in the world on game start
+  # List of possible settings (If not set, the default value will be picked):
+  # Weight >> Defines the weight of the items due to the weight system above (Default: DefaultWeight from above)
+  # Chance >> Defines the spawn chance of the items in the world on game start (Default: 0)
+  # Amount >> Defines how many items of a stack should be spawned/ placed. (Default: 1)
   Items:
     # Tools, Materials & Other Items
     POTION:
@@ -131,6 +139,7 @@ LastMinerStanding:
       Chance: 5
     ARROW:
       Weight: 1
+      Amount: 5
       Chance: 5
     # SWORDS
     IRON_SWORD:

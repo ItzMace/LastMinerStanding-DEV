@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 1
+  config: 2
   
   # Displays a Scoreboard on the right side of the screen with some information
   # Placeholders:
@@ -10,8 +10,9 @@ LastMinerStanding:
   # {version}		|		Shows the Plugin Version
   # {spigot}		|		Shows the Spigot Version
   # {players}		|		Shows the amount of players on the server
-  #	{spectators}	|		Shows the amount of spectators on the server
-  #	{alives}		|		Shows the amount of alive players on the server
+  # {spectators}	|		Shows the amount of spectators on the server
+  # {alives}		|		Shows the amount of alive players on the server
+  # {teams_alive}		|		Shows the amount of alive teams on the server
   # {empty}			|		Shows an empty row
   # {timer}			|		Shows a countdown
   # {minplayers}	|		Shows the minimal amount of players of game start
@@ -37,7 +38,7 @@ LastMinerStanding:
         score_4: " &8» &a{minplayers}"
         score_3: "{empty}"
         score_2: "&7Map"
-        score_1: "&8» &b{map}"
+        score_1: " &8» &b{map}"
         score_0: "{empty}"
     Ingame:
       enabled: true
@@ -50,32 +51,13 @@ LastMinerStanding:
         score_10: "{disable}"
         score_9: "{empty}"
         score_8: "&7Players alive"
-        score_7: "&8» &a{alives}"
+        score_7: "&8» &a{alives} players &7in &a{teams_alive} teams"
         score_6: "{empty}"
         score_5: "&7Weight"
-        score_4: "&8» &e{weight}&f/&e{maxweight}"
+        score_4: "&8» &e{weight} kg&7 of &e{maxweight} kg"
         score_3: "{empty}"
         score_2: "&7Blood"
-        score_1: "&8» &4&l{blood}&f/&4&l{bleeding}"
-        score_0: "{disable}"
-    Deathmatch:
-      enabled: true
-      Style:
-        header: "&f&lLastMinerStanding  &e{timer}"
-        score_14: " &oLMS {version}"
-        score_13: "{disable}"
-        score_12: "{disable}"
-        score_11: "{disable}"
-        score_10: "{disable}"
-        score_9: "{empty}"
-        score_8: "&7Players alive"
-        score_7: "&8» &a{alives}"
-        score_6: "{empty}"
-        score_5: "&7Weight"
-        score_4: "&8» &e{weight}&f/&e{maxweight}"
-        score_3: "{empty}"
-        score_2: "&7Blood"
-        score_1: "&8» &4&l{blood}&f/&4&l{bleeding}"
+        score_1: "&8» &4{blood}&7 with &4-{bleeding}"
         score_0: "{disable}"
     AfterGame:
       enabled: true
