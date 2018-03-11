@@ -1,7 +1,7 @@
 # World Configuration File for LastMinerStanding
 World:
   # DO NOT CHANGE THIS VALUE
-  config: 4
+  config: 5
   # Do you want this map to be enabled?
   enabled: false
   # The name of the map
@@ -39,45 +39,29 @@ World:
   # This are the item spawn location (areas)
   # YOU ARE FREE TO SET AS MANY SPAWN LOCATION AS YOU WISH TO. MAKE THEN WITH INCREASING IDs (Spawn0, Spawn1, Spawn2...)
   ItemSpawn:
+    # Do you want to allow items to spawn above water (or other fluids)?
+    AllowPlacingAboveWater: false
     # THIS DEFINES ALL SPAWN _AREAS_ [DEPRECATED]:
     Areas:
       # This is Spawn Area #0:
-      Spawn0:
+      #Spawn0:
         # How many items do you want to spawn in this area (eg. amount of Chests)
-        AmountOfItems: 12
+        # AmountOfItems: 6
         # This is the start location of the item spawn area:
-        From:
-          X: 419
-          Y: 64
-          Z: -735
+        # From:
+          # X: 419
+          # Y: 64
+          # Z: -735
         # This is the end location of the item spawn area:
-        To:
-          X: 719
-          Y: 76
-          Z: -698
-      # This is Spawn Area #1:
-      Spawn1:
-        # How many items do you want to spawn in this area (eg. amount of Chests)
-        AmountOfItems: 3
-        # This is the start location of the item spawn area:
-        From:
-          X: 399
-          Y: 63
-          Z: -838
-        # This is the end location of the item spawn area:
-        To:
-          X: 421
-          Y: 104
-          Z: -803
+        # To:
+          # X: 719
+          # Y: 76
+          # Z: -698
     # THIS DEFINES ALL SPAWN _LOCATIONS_:
     ExactLocations:
       # This is Spawn Location #0:
-      Spawn0:
-        X: 719
-        Y: 76
-        Z: -698
-      # This is Spawn Location #1:
-      Spawn1:
-        X: 720
-        Y: 76
-        Z: -698
+      # Spawn0:
+        # Amount: 6
+        # X: 719
+        # Y: 76
+        # Z: -698
