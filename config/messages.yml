@@ -46,8 +46,15 @@ LastMinerStanding:
     playerWon: "&e&lThe player &6&l{name}&e&l has won LastMinerStanding"
     # This message will be send when player don't have enough permission
     missingPermission: "&cYou don't have enough permission to access this."
+    # This message will be send when a player breaks a block that is not allowed to be destroyed
+    # (Leave empty to disable this message)
+    breakBlockDisallowed: "&cYou are not allowed to break this block."
     # This message will be send when a player gets spectator
     spectator: "&cYou are now spectator!"
+    # This message will be send when a player selects a player to spectate
+    spectatingPlayer: "&bYou are now spectating: {name}"
+    # This message will be send when a player selects a player to spectate but this player can not be found
+    spectatingPlayerFailed: "&cWe can't find this player. Please try again."
     # This will be send to a player when he/she uses the /start command
     gameStarted: "&aYou started the game..."
     # This message will be send when a player reached the maxmimum item weight allowed
@@ -71,3 +78,12 @@ LastMinerStanding:
     Multiarena:
       # What message should a player recieve when joining an arena? [Placeholder: {arena_name}]:
       joinArenaMessage: "&aYou have been connected to &l{arena_name}"
+    # Team Messages:
+    Teams:
+      # What message should a player recieve when successfully joining a team? [Placeholder: {team_name}]:
+      team_joined: "&aYou've joined &6{team_name}."
+      # What message should a player recieve when joining a team that is already full? [Placeholder: {team_name}]:
+      team_full: "&cSorry, but the team you wanted to join is already full."
+      # This message will be send when a player attacks a player who is part of the same team
+      # (Leave empty to disable this message)
+      friendlyFireWarning: "&cFRIENDLY FIRE! FRIENDLY FIRE!{br}&cStop hitting your teammates."

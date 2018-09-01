@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 7
+  config: 8
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -13,6 +13,9 @@ LastMinerStanding:
   # Do you want to execute the /reload command when the round is over?
   # NOTE: The server won't stop, it will just reload. This is not recommended, but you wished it to be added.
   doReloadAndNoShutdown: false
+  # AAC: If you have issues using the parachute with AAC, please increase this value (recommended: 3).
+  # (NOTE: This will disable the fly check for all LastMinerStanding players for the amount below in seconds)
+  aacCompatibilityDelay: 0
   # Prevent the players to stomp wheat in the lobby world?
   PreventStomping: true
   # Do you want to prevent a player from taking of the parachute?
