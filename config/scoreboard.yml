@@ -13,6 +13,7 @@ LastMinerStanding:
   # {spectators}	|		Shows the amount of spectators on the server
   # {alives}		|		Shows the amount of alive players on the server
   # {teams_alive}		|		Shows the amount of alive teams on the server
+  # {team_name}		|		Shows the current team name the player is in, otherwise '-----'
   # {empty}			|		Shows an empty row
   # {timer}			|		Shows a countdown
   # {minplayers}	|		Shows the minimal amount of players of game start
@@ -20,6 +21,7 @@ LastMinerStanding:
   # {maxweight}		|		Shows the maximum weight of items a player can have
   # {blood}			|		Shows the amount of blood a player currently has
   # {bleeding}		|		Shows the amount of blood a player looses per second
+  # {arena_name}		|		Shows the name of the arena a player is currently in
   Scoreboard:
     Lobby:
       enabled: true
