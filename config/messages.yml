@@ -1,12 +1,13 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 3
+  config: 4
   
   # Custom declareration of messages being send ingame
   # (Chat) Messages can be edited here:
   # Placeholders:
   # {name}					|		Displays the Name of a specific player (depends on context)
+  # {team_name}				|		Displays the Teamname of a specific team (depends on context)
   # {displayame}				|		Displays the Displayname of a specific player (depends on context)
   # {playerlistname}			|		Displays the Playerlistname of a specific player (depends on context)
   # {killer_name}				|		Displays the Name of a specific killer (depends on context)
@@ -44,6 +45,8 @@ LastMinerStanding:
     noWinnerLeft: "&cThere are no more players. The server will restart now."
     # This message will be send when a player won LastMinerStanding
     playerWon: "&e&lThe player &6&l{name}&e&l has won LastMinerStanding"
+    # This message will be send when a team won LastMinerStanding
+    teamWon: "&e&lThe team &6&l{team_name}&e&l has won LastMinerStanding"
     # This message will be send when player don't have enough permission
     missingPermission: "&cYou don't have enough permission to access this."
     # This message will be send when a player breaks a block that is not allowed to be destroyed
@@ -87,3 +90,8 @@ LastMinerStanding:
       # This message will be send when a player attacks a player who is part of the same team
       # (Leave empty to disable this message)
       friendlyFireWarning: "&cFRIENDLY FIRE! FRIENDLY FIRE!{br}&cStop hitting your teammates."
+    # Airdrop Messages:
+    Airdrop:
+      # What message do you want to be displayed when an airdrop is deployed? [Placeholder: {x}, {z}]
+      # (Note: If you want to disable this message, leave it empty.)
+      deployMessage: "&6Airdrop has reached its target.{br}&6Get it at &aX: {x} &6and &aZ: {z}"

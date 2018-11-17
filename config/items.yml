@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 5
+  config: 6
 
   # Which items do you want the players have in inventory on game start?:
   # List of possible settings (If not set, the default value will be picked):
@@ -15,8 +15,13 @@ LastMinerStanding:
     MAP:
       SlotID: 0
 
-  # Should the compass point to the next living player?
-  UseCompassAsPointer: true
+  CompassPointer:
+    # Should the compass point to the next living player?
+    UseCompassAsPointer: true
+    # What do you want the display name of the compass item to be? [Placeholders: {name}, {displayname}, {playerlistname}, {distance}]
+    CompassItemName: "&2Nearest player: &6{name} &awith &6{distance} &ablocks distance"
+    # What do you want the display name of the compass item to be when there is no player left?
+    CompassItemNameNoPlayerFound: "&eWe could not find any other players close to you"
 
   # Here you can manage the item spawns:
   # If you turn multiple entries to true, the system will select a random spawn type
@@ -41,6 +46,34 @@ LastMinerStanding:
     MaximumWeight: 100
     # Default weight of items picked up ingame (if NOT declared below)
     DefaultWeight: 0
+    # Punishment-Manager if the items of a player are to heavy.
+    # This list of potion effects can be expanded as much as you wish to.
+    # (A list of all potion effects can be found here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html )
+    PunishmentEffects:
+      # This is the first effect a player gets when having to heavy items:
+      BLINDNESS:
+        # This is the chance in percent how common it is to get this effect (0-100, default: 100).
+        Chance: 100
+        # This is the duration a player gets this effect (in ticks, 1 second = 20 ticks, default: 57).
+        Duration: 57
+        # This is the intensity level of this effect (default: 1).
+        Intensity: 1
+      # This is the second effect a player gets when having to heavy items:
+      SLOW:
+        # This is the chance in percent how common it is to get this effect (0-100, default: 100).
+        Chance: 100
+        # This is the duration a player gets this effect (in ticks, 1 second = 20 ticks, default: 57).
+        Duration: 57
+        # This is the intensity level of this effect (default: 1).
+        Intensity: 1
+      # This is the third effect a player gets when having to heavy items:
+      HUNGER:
+        # This is the chance in percent how common it is to get this effect (0-100, default: 100).
+        Chance: 100
+        # This is the duration a player gets this effect (in ticks, 1 second = 20 ticks, default: 57).
+        Duration: 57
+        # This is the intensity level of this effect (default: 1).
+        Intensity: 0
     
   # From here on, you can customize your crackshot item support:
   CrackShotItems:
@@ -51,145 +84,191 @@ LastMinerStanding:
       # IMPORTANT: Use your configured items name as item here (this is the default CS config):
       # Weight >> Defines the weight of the items due to the weight system above
       # Chance >> Defines the spawn chance of the items in the world on game start
+      # AirdropChance >> Defines the spawn chance of the items in an airdrop (Default: 0)
       Gauss:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
       Carbine:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
       Deagle:
         Weight: 6
         Chance: 5
+        AirdropChance: 5
       Bazooka:
         Weight: 20
         Chance: 5
+        AirdropChance: 5
       Python:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
       Riotshield:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
       Olympia:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
       Hunting:
         Weight: 13
         Chance: 5
+        AirdropChance: 5
       Type95:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
       AK-47:
         Weight: 10
         Chance: 5
+        AirdropChance: 5
 
-  # Custom declareration of items that can be found in game
+  # Customizable list of items that can be found in game
   # List of possible settings (If not set, the default value will be picked):
   # Weight >> Defines the weight of the items due to the weight system above (Default: DefaultWeight from above)
   # Chance >> Defines the spawn chance of the items in the world on game start (Default: 0)
   # Amount >> Defines how many items of a stack should be spawned/ placed. (Default: 1)
+  # Name >> Define a custom name the items should have ingame (+ color-code support)
+  # Lore >> Define a custom lore the items should have ingame (+ support of color-codes and {br} for multi-line)
+  # AirdropChance >> Defines the spawn chance of the items in an airdrop (Default: 0)
   Items:
     # Tools, Materials & Other Items
     POTION:
       Weight: 0
       Chance: 0
+      AirdropChance: 0
     STICK:
       Weight: 0
       Chance: 0
+      AirdropChance: 0
     COMPASS:
       Weight: 0
       Chance: 0
+      AirdropChance: 0
     FISHING_ROD:
       Weight: 3
       Chance: 5
+      AirdropChance: 0
     BOAT:
       Weight: 45
       Chance: 0
+      AirdropChance: 0
     PAPER:
       Weight: 7
       Chance: 6
+      AirdropChance: 0
     STONE:
       Weight: 3
       Chance: 0
+      AirdropChance: 0
     IRON_INGOT:
       Weight: 3
       Chance: 0
+      AirdropChance: 0
     GOLD_INGOT:
       Weight: 2
       Chance: 0
+      AirdropChance: 0
     LEATHER:
       Weight: 2
       Chance: 0
+      AirdropChance: 0
     # ELYTRA for 1.9+ only. For 1.8 -> RAILS
     ELYTRA:
       Weight: 20
       Chance: 0
+      AirdropChance: 0
     RAILS:
       Weight: 20
       Chance: 0
+      AirdropChance: 0
     # Food
     COOKED_BEEF:
       Weight: 1
       Chance: 7
+      AirdropChance: 0
     GOLDEN_APPLE:
       Weight: 8
       Chance: 5
+      AirdropChance: 0
     # BOW & ARROW
     BOW:
       Weight: 8
       Chance: 5
+      AirdropChance: 0
     ARROW:
       Weight: 1
       Amount: 5
       Chance: 5
+      AirdropChance: 0
     # SWORDS
     IRON_SWORD:
       Weight: 9
       Chance: 3
+      AirdropChance: 0
     STONE_SWORD:
       Weight: 7
       Chance: 5
+      AirdropChance: 0
     WOOD_SWORD:
       Weight: 4
       Chance: 5
+      AirdropChance: 0
     GOLD_SWORD:
       Weight: 3
       Chance: 5
+      AirdropChance: 0
     # IRON ARMOR
     IRON_HELMET:
       Weight: 5
       Chance: 3
+      AirdropChance: 0
     IRON_CHESTPLATE:
       Weight: 50
       Chance: 1
+      AirdropChance: 0
     IRON_LEGGINGS:
       Weight: 30
       Chance: 2
+      AirdropChance: 0
     IRON_BOOTS:
       Weight: 6
       Chance: 3
+      AirdropChance: 0
     # CHAINMAIL ARMOR
     CHAINMAIL_HELMET:
       Weight: 4
       Chance: 5
+      AirdropChance: 0
     CHAINMAIL_CHESTPLATE:
       Weight: 22
       Chance: 5
+      AirdropChance: 0
     CHAINMAIL_LEGGINGS:
       Weight: 12
       Chance: 5
+      AirdropChance: 0
     CHAINMAIL_BOOTS:
       Weight: 4
       Chance: 5
+      AirdropChance: 0
     # LEATHER ARMOR
     LEATHER_HELMET:
       Weight: 2
       Chance: 5
+      AirdropChance: 0
     LEATHER_CHESTPLATE:
       Weight: 6
       Chance: 5
+      AirdropChance: 0
     LEATHER_LEGGINGS:
       Weight: 4
       Chance: 5
+      AirdropChance: 0
     LEATHER_BOOTS:
       Weight: 2
       Chance: 5
+      AirdropChance: 0

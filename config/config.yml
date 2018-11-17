@@ -181,10 +181,12 @@ Gameplay:
       Commands:
         # Do you want to dispatch commands when this game phase starts?
         enabled: false
+        # Only execute if there are any players who won?
+        onlyOnWin: true
         # Which command do you want to execute?
         # Placeholders:
-        # {winner_name} - The name of the player who won, otherwise 'null'
-        # {winner_displayname} - The displayname of the player who won, otherwise 'null'
-        # {winner_playerlistname} - The playerlistname of the player who won, otherwise 'null'
+        # {winner_name} - The name(s) of the player(s) who won, otherwise 'null'
+        # {winner_displayname} - The displayname(s) of the player(s) who won, otherwise 'null'
+        # {winner_playerlistname} - The playerlistname(s) of the player(s) who won, otherwise 'null'
         commands:
           - "/examplecommand {winner_name}"

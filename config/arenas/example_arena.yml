@@ -1,7 +1,7 @@
 # Now Presenting: LastMinerStanding Multiarena System
 LastMinerStanding:
   # Do not change this value:
-  config: 1
+  config: 2
   
   # Do you want the arena to be enabled?
   enabled: false
@@ -41,6 +41,30 @@ LastMinerStanding:
     Multiworld:
       enabled: false
       World: "lobbyworld"
+  # Airdrop Manager
+  Airdrops:
+    # Do you want Airdrops to be enabled in this arena?
+    enabled: true
+    # What material should the chest be (can be any block you wish)?
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+    # PLEASE NOTE: Some blocks can't let beacon light through!
+    ChestMaterial: ENDER_CHEST
+    # How long should the delay between two airdrops be (in seconds)?
+    DelaysBetweenAirdrops: 60
+    # How many items do you want to have per chest (maximum amount)?
+    MaxItemsPerChest: 3
+    # Beacon Light System
+    BeaconLight:
+      # Do you want the Beacon Light System to be enabled?
+      enabled: true
+      # What colors do you want the beacon light to have in the states?
+      # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html
+      # Use "NULL" as color to turn the light off.
+      Colors:
+        # Color, when the chest hasn't been opened yet:
+        not_opened_yet: GREEN
+        # Color, when the chest has been opened already:
+        opened_already: WHITE
   # MOTD Manager
   MOTD:
     # Do you want to enable the MOTD Manager (recommended for standaloneservers ONLY!)
