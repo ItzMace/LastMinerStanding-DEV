@@ -1,7 +1,7 @@
 # Now Presenting: LastMinerStanding Multiarena System
 LastMinerStanding:
   # Do not change this value:
-  config: 2
+  config: 3
   
   # Do you want the arena to be enabled?
   enabled: false
@@ -53,6 +53,8 @@ LastMinerStanding:
     DelaysBetweenAirdrops: 60
     # How many items do you want to have per chest (maximum amount)?
     MaxItemsPerChest: 3
+    # Do you want to prevent the spawing of Airdrops on water?
+    PreventSpawningOnWater: false
     # Beacon Light System
     BeaconLight:
       # Do you want the Beacon Light System to be enabled?

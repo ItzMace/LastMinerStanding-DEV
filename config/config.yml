@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 8
+  config: 9
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -18,8 +18,6 @@ LastMinerStanding:
   aacCompatibilityDelay: 0
   # Prevent the players to stomp wheat in the lobby world?
   PreventStomping: true
-  # Do you want to prevent a player from taking of the parachute?
-  PreventTakeOffParachute: false
   # Do you want to prevent a player from joining when the game has already been started?
   PreventJoinAfterStart: false
   # General JoinSign Module
@@ -70,6 +68,15 @@ Gameplay:
   disallowBlockBreaksInLobbyWorld: true
   # How many HP should all players have max.? (Default: 20.0 = 10 Hearts)
   maxHealthModifier: 20.0
+  
+  # Parachute Manager
+  ParachuteManager:
+    # Do you want the parachute to be disabled? (Note: Players will fall out of the sky.)
+    DisableParachute: false
+    # Do you want the parachute to be visible? (This will spawn a chicken on the players head)
+    VisibleParachute: true
+    # Do you want the player to temporary disable the parachute by holding the 'sneak' key?
+    SneakToDisable: true
   
   # From here on, the Team engine starts:
   Teams:
