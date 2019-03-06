@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 9
+  config: 10
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -77,6 +77,12 @@ Gameplay:
     VisibleParachute: true
     # Do you want the player to temporary disable the parachute by holding the 'sneak' key?
     SneakToDisable: true
+    # Settings for the movement of the player when a parachute is deployed.
+    MovementSettings:
+      # Fall speed multiplier, when there is a parachute deployed.
+      FallSpeedMultiplier: 0.75
+      # Fall speed multiplier, when there is a parachute deployed.
+      DirectionSpeedMultiplier: 0.375
   
   # From here on, the Team engine starts:
   Teams:
@@ -184,6 +190,8 @@ Gameplay:
         commands:
           - "/examplecommand"
     GameEnd:
+      # How long do you want the game end phase to be? (Default: 10)
+      Time: 10
       # Custom Command Executor
       Commands:
         # Do you want to dispatch commands when this game phase starts?
