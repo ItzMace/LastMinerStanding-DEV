@@ -37,9 +37,9 @@ LastMinerStanding:
     end_gameTimedOut: "&cThe game has end!{br}No winner could be determined!"
     # This message will be send when the server is about to shut down
     end_restarting: "&7The server restarts in &e{timer} second(s)"
-    # This message will be send when a player dies without other players damage
+    # This message will be send when a player dies without other players damage (or leave empty to disable)
     player_death: "&7The player &a{name} &7has died.&7"
-    # This message will be send when a player gets killed by a player
+    # This message will be send when a player gets killed by a player (or leave empty to disable)
     player_killed: "&7The player &a{name} &7was killed by &a{killer_name} &7"
     # This message will be send when all players left the game and there is no winner
     noWinnerLeft: "&cThere are no more players. The server will restart now."

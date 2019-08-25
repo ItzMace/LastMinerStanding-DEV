@@ -1,12 +1,16 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 10
+  config: 11
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
   # If false: You use a MultiWorld System on your Server (Multiverse etc.)
   standaloneServer: true
+  # Do you want to disable the feature that LastMinerStanding checks for any missing configuration options in your files?
+  # This feature can help you to detect and fix any issues due to missing configuration options.
+  # For further explanation, read here: https://github.com/ItzMace/LastMinerStanding-DEV/issues/227
+  disableCheckForMissingConfigOptions: false
   # Do you want to allow us to remove your idcounts.dat file in the world folder when the server restarts?
   # (Needed to fix the map overflow in the world directory)
   forceRemoveIdCounts: false
