@@ -7,11 +7,18 @@ LastMinerStanding:
   # List of possible settings (If not set, the default value will be picked):
   # Amount >> Defines how many items of a stack should be spawned/ placed. (Default: 1)
   # SlotID >> Defines on which slot in inventory the item will be placed. (Default: First free slot)
-  # CustomName >> Defines which name the item should have. (Default: Default item name (by Minecraft))
+  # CustomName >> Defines which name the item should have.
+  # Enchantments (String-List) >> A list of enchantments to be added to the item.
   StartItems:
     COMPASS:
       Amount: 1
       SlotID: 8
+    LEATHER:
+      Amount: 1
+      SlotID: 7
+      CustomName: "&6Backpack"
+      Enchantments:
+        - DURABILITY
     MAP:
       SlotID: 0
 

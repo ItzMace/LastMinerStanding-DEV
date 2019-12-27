@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 11
+  config: 12
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -9,7 +9,7 @@ LastMinerStanding:
   standaloneServer: true
   # Do you want to disable the feature that LastMinerStanding checks for any missing configuration options in your files?
   # This feature can help you to detect and fix any issues due to missing configuration options.
-  # For further explanation, read here: https://github.com/ItzMace/LastMinerStanding-DEV/issues/227
+  # # For further explanation, read here: https://github.com/ItzMace/LastMinerStanding-DEV/issues/227
   disableCheckForMissingConfigOptions: false
   # Do you want to allow us to remove your idcounts.dat file in the world folder when the server restarts?
   # (Needed to fix the map overflow in the world directory)
@@ -94,6 +94,8 @@ Gameplay:
     size: 1
     # Team-Selector Item
     Item:
+      # Do you want players to be able to select their team using an item?
+      enabled: true
       # Team-Selector Item
       Type: WATCH
       # Team-Selector Item
@@ -168,6 +170,40 @@ Gameplay:
       - DROWNING
       - STARVATION
       - FALL
+
+  # JumpPad System
+  # Can be used to boost players into the air when they step on pressure plates.
+  JumpPad:
+    # Do you wish to enable the JumpPad system? (If false, this will overwrite the following options)
+    enabled: true
+    # Do you wish to enable the JumpPad system in the waiting lobby?
+    enabled_in_lobby: true
+    # What material should be used for JumpPads (default: STONE_PLATE)?
+    material: "STONE_PLATE"
+    # What should the push-distance be?
+    push_distance: 3.5
+    # What should the push-height be?
+    push_height: 1.0
+
+  # Backpack System
+  # Can be used to give players additional inventory space.
+  Backpack:
+    # Do you wish to enable the Backpack system? (If false, this will overwrite the following options)
+    enabled: true
+    # Should the content of the backpack be bound to the player? (If false, the backpack-content is bound to the explicit item)
+    content_bound_to_player: true
+    # What do you want the title of the backpack-inventory to be?
+    inventory_title: "&6Backpack"
+    # How many slots do you want the backpack to have in size? (Default: 9)
+    storage_size: 9
+    # The backpack will be opened when right-clicking the following item.
+    item:
+      # What material should be used for Backpacks (default: LEATHER)?
+      material: "LEATHER"
+      # What item name should be used for Backpacks?
+      name: "&6Backpack"
+      # Do you want the item to be enchanted (using enchantment 'Durability')?
+      is_enchanted: true
 
   # Specific Round Phase Settings
   Phases:
