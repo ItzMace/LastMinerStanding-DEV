@@ -12,13 +12,13 @@ LastMinerStanding:
   # From here on, you can create the join signs:
   JoinSigns:
     # Do you want joinsigns to be enabled? (Support for Multiworld servers only!)
-    enabled: true
+    enabled: false
     # Syntax: "WORLD;X-coordinate;Y-coordinate;Z-coordinate" | Example: "world;127;64;-25"
     # (If no Fallback is provided, players will be kicked when the game ends.)
     Locations:
-      - "world;0;64;0"
-      - "world;0;64;1"
-      - "world;0;64;2"
+#      - "world;0;64;0"
+#      - "world;0;64;1"
+#      - "world;0;64;2"
   # Lobby Location
   LobbyLocation:
     World: "world"
