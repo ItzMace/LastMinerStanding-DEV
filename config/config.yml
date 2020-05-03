@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 12
+  config: 13
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -11,6 +11,9 @@ LastMinerStanding:
   # This feature can help you to detect and fix any issues due to missing configuration options.
   # # For further explanation, read here: https://github.com/ItzMace/LastMinerStanding-DEV/issues/227
   disableCheckForMissingConfigOptions: false
+  # Do you want to disable metrics?
+  # # Metrics are usefull to collect data to improve the general experience with LastMinerStanding.
+  disableMetrics: false
   # Do you want to allow us to remove your idcounts.dat file in the world folder when the server restarts?
   # (Needed to fix the map overflow in the world directory)
   forceRemoveIdCounts: false
@@ -113,6 +116,16 @@ Gameplay:
         - "Charlie"
         - "Delta"
         - "Echo"
+  
+  # Custom Player Models (to prevent targetting or for special events)
+  CustomPlayerModels:
+    # Here you can control the skin of the players.
+    Skins:
+      # Do you want to enable the custom skin manager?
+      disable: false
+      # Information of the custom skin you want the players to have:
+      # # THIS WILL BE ADDED IN THE NEXT UPDATE.
+      # # The current implementation is for debugging/ testing.
   
   # Here you can manage which blocks players should be able to break during ingame:
   BlockBreak:
