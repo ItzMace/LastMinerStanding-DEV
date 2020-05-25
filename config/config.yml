@@ -1,7 +1,7 @@
 # LastMinerStanding Configuration File
 LastMinerStanding:
   # Do not change this value:
-  config: 13
+  config: 14
   # Do you want this plugin to be on a standalone server system?
   # Standalone means, that this is the only gametype on the server
   # If true: The plugin will be the only gametype on the server
@@ -55,6 +55,28 @@ LastMinerStanding:
     # MOTD for game state 'RESTARTING'
     restarting: "&aLMS &7> &cRESTARTING"
 
+  # Performance Manager:
+  PerformanceManager:
+    # This will limit the amount of blocks that are placed at the same time.
+    BlockPlacingQueue:
+      enable: true
+      # Amount of blocks to be placed every x ticks (= every tickInterval)
+      batchSize: 1
+      # Amount of ticks between block placing batches (20 ticks = 1 second)
+      tickInterval: 5
+      # Place blocks that are close to a player for improved gameplay experience.
+      PriorityBlockPlacingToClosePlayers:
+        enable: true
+        # Range around a player where blocks are placed earlier.
+        distanceToPlayer: 50
+    # This will place all the chests when the world is being loaded (on server start)
+    # (INFORMATION: This only works on STANDALONE SERVERS!)
+    PlaceChestsOnServerStart:
+      # Amount of blocks to be placed every x ticks (= every tickInterval)
+      batchSize: 50
+      # Amount of ticks between block placing batches (20 ticks = 1 second)
+      tickInterval: 10
+
 # Here you can edit gameplay relevant settings
 Gameplay:
   # Minimum amount of players required for the game to start.
@@ -67,8 +89,6 @@ Gameplay:
   dropItemsOnDeath: true
   # Do you want to allow players to drop items from their inventory?
   dropItemsOutOfInventory: true
-  # Do you want to use Elytra-Flight for Spigot 1.9+? (Limited support if true!)
-  useElytra: false
   # Do you want to enable players natural regeneration when the food bar is full enough?
   useNaturalRegeneration: false
   # Do you want to fully disallow breaking blocks in the lobby world?
@@ -82,8 +102,15 @@ Gameplay:
     DisableParachute: false
     # Do you want the parachute to be visible? (This will spawn a chicken on the players head)
     VisibleParachute: true
+    # Do you want to use Elytra-Flight for Spigot 1.9+? (Limited support if true!)
+    ElytraFlight: false
+    # Do you want to put the replaced chestplate of a player into his/ her inventory (if possible)?
+    #  If false, the item will be saved internally and put as chestplate once the player lands.
+    PlaceReplacedChestplateToInventory: true
     # Do you want the player to temporary disable the parachute by holding the 'sneak' key?
     SneakToDisable: true
+    # Do you want to disable/ lock the parachute in the current round for players after they landed on the ground once?
+    LockParachuteAfterOnGround: false
     # Settings for the movement of the player when a parachute is deployed.
     MovementSettings:
       # Fall speed multiplier, when there is a parachute deployed.

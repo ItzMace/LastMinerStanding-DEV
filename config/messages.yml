@@ -31,8 +31,6 @@ LastMinerStanding:
     ingame_placeItems: "&aThere were &e{items} items &ahidden in the world."
     # This message will be send when the warmup countdown expired and PVP is enabled
     ingame_pvpEnable: "&4&lPVP has now been enabled"
-    # This message will be send when the player lands on the ground
-    ingame_flyEnd: "&a&lGood luck. You can now search for items."
     # This message will be send when the time runs out and no winner is given
     end_gameTimedOut: "&cThe game has end!{br}No winner could be determined!"
     # This message will be send when the server is about to shut down

@@ -89,6 +89,7 @@ LastMinerStanding:
     useCrackShotItems: true
     Items:
       # IMPORTANT: Use your configured items name as item here (this is the default CS config):
+      # Amount >> Defines how many items of a stack should be spawned/ placed. (Default: 1)
       # Weight >> Defines the weight of the items due to the weight system above
       # Chance >> Defines the spawn chance of the items in the world on game start
       # AirdropChance >> Defines the spawn chance of the items in an airdrop (Default: 0)
